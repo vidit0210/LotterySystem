@@ -12,7 +12,7 @@ async function deploy(){
     const accounts = await web3.eth.getAccounts();
     console.log("Attempting to Deploy from Account:",accounts[0]);
    const result= await new web3.eth.Contract(JSON.parse(interface))
-                .deploy({data:bytecode,arguments:['Vidit']})
+                .deploy({data:bytecode})
                 .send({from:accounts[0],gas:1000000});
     //IMPORTANT STEP where contract got deployed
     console.log("Contract deployed to:",result.options.address);
