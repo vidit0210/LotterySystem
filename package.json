@@ -1,13 +1,13 @@
 {
-  "name": "solidity_inbox_project",
+  "name": "lotterysystem",
   "version": "1.0.0",
   "description": "",
   "main": "compile.js",
   "dependencies": {
-    "ganache-cli": "^6.2.3",
     "solc": "^0.4.17",
-    "truffle-hdwallet-provider": "0.0.3",
-    "web3": "^1.0.0-beta.26"
+    "truffle-hdwallet-provider": "^0.0.3",
+    "web3": "^1.0.0-beta.26",
+    "ganache-cli": "^6.2.3"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vidit0210/Solidity_Inbox_Project.git"
+    "url": "git+https://github.com/vidit0210/LotterySystem.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vidit0210/Solidity_Inbox_Project/issues"
+    "url": "https://github.com/vidit0210/LotterySystem/issues"
   },
-  "homepage": "https://github.com/vidit0210/Solidity_Inbox_Project#readme"
+  "homepage": "https://github.com/vidit0210/LotterySystem#readme"
 }
