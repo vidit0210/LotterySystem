@@ -48,5 +48,30 @@ describe("Lottery Contract",()=>{
         assert.equal(3,players.length);
     });
 
+    //He we are trying to pass a test where we fail entering the amount
+    it('Requires Mininmum Amount of Ether',async()=>{
+        try{
+            await lottery.methods.enter().send({
+                from:account[0],
+                value:20
+            })
+            assert(false);
+        }catch(err){
+            assert(err);
+        }
+
+    });
+    
+    //Only Manager can call pick winner
+    it('Only Manager can Pick The Winner',async()=>{
+        try{
+            await lottery.methods.pickWinner().send({
+                from:account[1]
+            })
+            assert(false)
+        }catch(err){
+            assert(err);
+        }
+    })
     
 });
