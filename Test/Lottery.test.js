@@ -21,7 +21,14 @@ describe("Lottery Contract",()=>{
         assert.ok(lottery.options.address);
     })
 
-    it('Can Enter?', async() => {
+    it("Can Enter one",async()=>{
+        await lottery.methods.enter().send({
+            from:account[0],
+            value:web3.utils.toWei('0.03','ether')
+        });
+    });
+
+    it('Can Enter many?', async() => {
         await lottery.methods.enter().send(
             {
                 from:account[0],
